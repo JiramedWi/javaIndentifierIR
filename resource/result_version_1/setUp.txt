@@ -1,0 +1,135 @@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Logger][=][Logger][.][Get, Logger][(][Enhanced, Pattern, Layout, Test][.][Class][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Props][=][New][Properties][(][)][;][Props][.][Put][(][", Toto"][,]["wonderful"][)][;][Props][.][Put][(]["key1"][,]["value1"][)][;][Props][.][Put][(]["key2"][,]["value2"][)][;][Props][.][Put][(]["line.separator"][,][System][.][Get, Property][(]["line.separator"][)][)][;][Props][.][Put][(]["java.home"][,][System][.][Get, Property][(]["java.home"][)][)][;][System][.][Set, Properties][(][Props][)][;]@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Root][.][Remove, All, Appenders][(][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Rb, Us][=][Resource, Bundle][.][Get, Bundle][(][", L7, D"][,][New][Locale][(]["en"][,][", Us"][)][)][;][Assert, Not, Null][(][Rb, Us][)][;][Rb, Fr][=][Resource, Bundle][.][Get, Bundle][(][", L7, D"][,][New][Locale][(]["fr"][,][", Fr"][)][)][;][Assert, Not, Null][(][", Got a null resource bundle."][,][Rb, Fr][)][;][Rb, Ch][=][Resource, Bundle][.][Get, Bundle][(][", L7, D"][,][New][Locale][(]["fr"][,][", Ch"][)][)][;][Assert, Not, Null][(][", Got a null resource bundle."][,][Rb, Ch][)][;]@@
+@@
+@@
+@@
+@@
+[Mdc][.][Clear][(][)][;]@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Root][.][Remove, All, Appenders][(][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Dom, Configurator][.][Configure][(]["input/xml/, Socket, Appender, Test, Config.xml"][)][;][Logger][=][Logger][.][Get, Logger][(][Socket, Appender, Test][.][Class][)][;][Secondary][=][(][Last, Only, Appender][)][Logger][.][Get, Logger][(]["org.apache.log4j.net., Socket, Appender, Test, Dummy"][)][.][Get, Appender][(]["last, Only"][)][;]@@
+@@
+[System][.][Out][.][Println][(][", Setting up test case."][)][;]@@
+@@
+@@
+@@
+@@
+@@
+[Aor][=][New][Ut, Object, Renderer][(][", A"][)][;][Bor][=][New][Ut, Object, Renderer][(][", B"][)][;][Xor][=][New][Ut, Object, Renderer][(][", X"][)][;][Yor][=][New][Ut, Object, Renderer][(][", Y"][)][;][Oor][=][New][Ut, Object, Renderer][(][", Object"][)][;][Nor][=][New][Ut, Object, Renderer][(][", Number"][)][;][Ior][=][New][Ut, Object, Renderer][(][", Integer"][)][;][Cor][=][New][Ut, Object, Renderer][(][", Comparable"][)][;][Sor][=][New][Ut, Object, Renderer][(][", Serializable"][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Logger][=][Logger][.][Get, Logger][(][Pattern, Layout, Test, Case][.][Class][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Log, Manager][.][Get, Logger, Repository][(][)][.][Reset, Configuration][(][)][;][Hashtable][Context][=][Mdc][.][Get, Context][(][)][If][(][Context][!=][Null][)][{][Context][.][Clear][(][)][;][}][Context][.][Clear][(][)][;]@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Logger][=][Logger][.][Get, Logger][(]["test"][)][;]@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Root][.][Remove, All, Appenders][(][)][;]@@
+@@
+@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Logger][=][Logger][.][Get, Logger][(][Custom, Level, Test, Case][.][Class][)][;]@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Logger][=][Logger][.][Get, Logger][(][Dom, Test, Case][.][Class][)][;]@@
+@@
+@@
+@@
+@@
+@@
+[Ndc][.][Clear][(][)][;][If][(][Mdc][.][Get, Context][(][)][!=][Null][)][{][Mdc][.][Get, Context][(][)][.][Clear][(][)][;][}][Mdc][.][Get, Context][(][)][.][Clear][(][)][;]@@
+@@
+[Root][=][Logger][.][Get, Root, Logger][(][)][;][Root][.][Set, Level][(][Level][.][Trace][)][;][Logger][=][Logger][.][Get, Logger][(][Xml, Layout, Test, Case][.][Class][)][;][Logger][.][Set, Level][(][Level][.][Trace][)][;]@@
+@@
